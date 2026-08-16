@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Official website of Mayhainu Marma (Mehai), Dancer, Model, and Artist.">
+    <meta name="keywords" content="Mayhainu Marma, Mehai, Dancer, Model, Fashion Design, Art, TikTok, Instagram">
+    <meta name="author" content="Mehai">
+    <title>Mayhainu Marma - Dancer & Model</title>
+    
+    <!-- Google Fonts: Poppins (Cute & Round) + Playfair Display (Elegant) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,400&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome for Social Media Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- CSS Design (Internal) -->
+    <style>
+        /* CSS Variables for Girly & Sweet Theme */
+        :root {
+            --bg-main: #FFF0F5; /* LavenderBlush / Very light pink */
+            --bg-secondary: #FDE2E4; /* Soft pastel pink */
+            --text-main: #4A3B3C; /* Soft dark grayish-brown */
+            --text-muted: #7A696A;
+            --accent-color: #FF8FAB; /* Cute hot pink / Rose */
+            --accent-light: #FFB3C6;
+            --card-bg: #FFFFFF;
+            --shadow: 0 12px 35px rgba(255, 143, 171, 0.15);
+            --transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+        }
+
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--bg-main);
+            color: var(--text-main);
+            line-height: 1.8;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+            color: var(--text-main);
+        }
+
+        /* Container */
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Typography & Layout */
+        p {
+            color: var(--text-muted);
+            font-size: 1.05rem;
+            margin-bottom: 15px;
+        }
+
+        p:last-child {
+            margin-bottom: 0;
+        }
+
+        .section-intro {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .divider {
+            border: 0;
+            height: 2px;
+            background-image: linear-gradient(to right, rgba(255, 143, 171, 0), rgba(255, 143, 171, 0.5), rgba(255, 143, 171, 0));
+            margin: 30px 0;
+            border-radius: 50%;
+        }
+
+        .inline-link {
+            color: var(--accent-color);
+            text-decoration: none;
+            font-weight: 600;
+            border-bottom: 2px dashed var(--accent-light);
+            transition: var(--transition);
+        }
+
+        .inline-link:hover {
+            border-bottom: 2px solid var(--accent-color);
+            color: #FF5D8F;
+        }
+
+        /* Animated Background for Hero */
+        @keyframes gradientBG {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        /* Hero Section */
+        .hero-section {
+            min-height: 75vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            background: linear-gradient(-45deg, #FFF0F5, #FDE2E4, #FFF5F7, #FFDFE9);
+            background-size: 400% 400%;
+            animation: gradientBG 12s ease infinite;
+            padding: 100px 20px 60px;
+            border-bottom: 3px solid rgba(255, 143, 171, 0.2);
+            position: relative;
+        }
+
+        /* Profile Image with Floating Animation */
+        .profile-pic-container {
+            margin-bottom: 25px;
+            position: relative;
+            display: inline-block;
+        }
+
+        .profile-pic {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 6px solid #FFF;
+            box-shadow: 0 15px 40px rgba(255, 143, 171, 0.4);
+            animation: float 4s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-15px); }
+            100% { transform: translateY(0px); }
+        }
+
+        /* Cute Sparkles Around Image */
+        .sparkle {
+            position: absolute;
+            color: var(--accent-color);
+            font-size: 1.5rem;
+            animation: twinkle 2s infinite alternate;
+        }
+        .sparkle-1 { top: 10%; left: -10%; animation-delay: 0s; }
+        .sparkle-2 { bottom: 20%; right: -15%; animation-delay: 1s; font-size: 2rem; }
+        .sparkle-3 { top: 30%; right: -5%; animation-delay: 0.5s; font-size: 1.2rem; color: #FFB3C6; }
+
+        @keyframes twinkle {
+            0% { opacity: 0.3; transform: scale(0.8); }
+            100% { opacity: 1; transform: scale(1.2); }
+        }
+
+        .hero-section h1 {
+            font-size: 4rem;
+            margin-bottom: 10px;
+            color: var(--accent-color);
+            text-shadow: 2px 2px 4px rgba(255, 143, 171, 0.2);
+        }
+
+        .hero-section .subtitle {
+            font-size: 1.2rem;
+            color: var(--text-muted);
+            font-weight: 500;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        /* Sections */
+        section {
+            padding: 90px 0;
+        }
+
+        section:nth-child(even) {
+            background-color: var(--bg-secondary);
+            border-radius: 40px 40px 0 0;
+            margin-top: -40px;
+            position: relative;
+            z-index: 1;
+        }
+
+        section h2 {
+            font-size: 2.6rem;
+            margin-bottom: 45px;
+            text-align: center;
+            position: relative;
+        }
+
+        section h2::after {
+            content: '✿';
+            display: block;
+            font-size: 1.5rem;
+            color: var(--accent-light);
+            margin: 5px auto 0;
+        }
+
+        /* Content Boxes */
+        .content-box {
+            background: var(--card-bg);
+            padding: 45px;
+            border-radius: 25px;
+            box-shadow: var(--shadow);
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+            transition: var(--transition);
+            border: 2px dashed transparent;
+        }
+
+        .content-box:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 45px rgba(255, 143, 171, 0.25);
+            border-color: var(--accent-light);
+        }
+
+        /* Lists */
+        .feature-list {
+            list-style: none;
+            margin-top: 25px;
+            text-align: left;
+            display: inline-block;
+        }
+
+        .feature-list li {
+            padding: 12px 10px 12px 35px;
+            border-bottom: 1px dashed var(--accent-light);
+            color: var(--text-muted);
+            position: relative;
+        }
+
+        .feature-list li::before {
+            content: '❤';
+            color: var(--accent-color);
+            position: absolute;
+            left: 0;
+            font-size: 1.1rem;
+        }
+
+        .feature-list li:last-child {
+            border-bottom: none;
+        }
+
+        .feature-list strong {
+            color: var(--text-main);
+            font-weight: 600;
+        }
+
+        /* Grid Cards */
+        .grid-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+            gap: 25px;
+        }
+
+        .card {
+            background: var(--card-bg);
+            padding: 35px 20px;
+            border-radius: 20px;
+            text-align: center;
+            font-weight: 600;
+            color: var(--text-main);
+            box-shadow: var(--shadow);
+            border: 2px solid transparent;
+            transition: var(--transition);
+            cursor: pointer;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .card i {
+            font-size: 2rem;
+            color: var(--accent-light);
+            transition: var(--transition);
+        }
+
+        .card:hover {
+            transform: translateY(-10px) scale(1.02);
+            border-color: var(--accent-color);
+            box-shadow: 0 15px 35px rgba(255, 143, 171, 0.3);
+        }
+
+        .card:hover i {
+            color: var(--accent-color);
+            transform: scale(1.1) rotate(10deg);
+        }
+
+        /* Social Icon Buttons */
+        .social-links {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .icon-links {
+            gap: 25px;
+        }
+
+        .icon-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 60px;
+            height: 60px;
+            background-color: var(--card-bg);
+            color: var(--accent-color);
+            border-radius: 50%;
+            font-size: 1.6rem;
+            transition: var(--transition);
+            text-decoration: none;
+            box-shadow: var(--shadow);
+        }
+
+        .icon-btn:hover {
+            background-color: var(--accent-color);
+            color: #fff;
+            transform: translateY(-8px) rotate(360deg);
+            box-shadow: 0 15px 25px rgba(255, 143, 171, 0.5);
+        }
+
+        /* Footer */
+        footer {
+            background-color: #FFB3C6;
+            background-image: linear-gradient(315deg, #FFB3C6 0%, #FF8FAB 74%);
+            color: #fff;
+            text-align: center;
+            padding: 60px 20px;
+            border-radius: 40px 40px 0 0;
+            margin-top: -30px;
+            position: relative;
+            z-index: 2;
+        }
+
+        footer h2 {
+            color: #fff;
+        }
+
+        footer h2::after {
+            display: none;
+        }
+
+        .email-link {
+            color: #FFF;
+            text-decoration: none;
+            font-size: 1.3rem;
+            font-weight: 600;
+            border-bottom: 2px dotted #FFF;
+            transition: var(--transition);
+        }
+
+        .email-link:hover {
+            letter-spacing: 1px;
+        }
+
+        .copyright {
+            margin-top: 30px;
+            font-size: 0.95rem;
+            color: rgba(255, 255, 255, 0.8);
+        }
+
+        /* Fade-in Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(40px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .animate-fade-in {
+            opacity: 0;
+            animation: fadeIn 1s cubic-bezier(0.25, 0.8, 0.25, 1) forwards;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero-section h1 { font-size: 3rem; }
+            .profile-pic { width: 160px; height: 160px; }
+            section h2 { font-size: 2.2rem; }
+            .grid-cards { grid-template-columns: 1fr; }
+            .icon-btn { width: 50px; height: 50px; font-size: 1.3rem; }
+        }
+    </style>
+</head>
+<body>
+    <header class="hero-section">
+        <div class="container animate-fade-in">
+            <!-- Owner Profile Picture -->
+            <div class="profile-pic-container">
+                <i class="fas fa-star sparkle sparkle-1"></i>
+                <img src="IMG_1029.jpeg" alt="Mayhainu Marma (mehai)" class="profile-pic">
+                <i class="fas fa-star sparkle sparkle-2"></i>
+                <i class="fas fa-heart sparkle sparkle-3"></i>
+            </div>
+            
+            <h1>Mehai</h1>
+            <p class="subtitle">Dancer ✿ Model ✿ Fashion Enthusiast ✿ Artist</p>
+        </div>
+    </header>
+
+    <main>
+        <section class="about animate-fade-in" style="animation-delay: 0.2s;">
+            <div class="container">
+                <h2>About Mayhainu</h2>
+                <div class="content-box">
+                    <p>Born on May 28, 2007, in Bangladesh, <strong>Mayhainu Marma</strong> currently resides in the beautiful city of Dhaka. She is a dedicated student at Bangladesh Open University.</p>
+                    <p>Known affectionately as <strong>Mehai</strong> in the digital world, she is building a dazzling career as a passionate DANCER and MODEL. With a heart full of art and creativity, she brings a sweet and energetic vibe to everything she does!</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="skills animate-fade-in" style="animation-delay: 0.3s;">
+            <div class="container">
+                <h2>Passions & Talents</h2>
+                <div class="content-box">
+                    <p>Mayhainu is a multi-talented girl whose creativity knows no bounds. Here are the things she loves doing most:</p>
+                    <ul class="feature-list">
+                        <li><strong>Dance:</strong> Highly popular on TikTok and Instagram, she loves expressing herself through graceful and energetic moves!</li>
+                        <li><strong>Fashion Design:</strong> Possesses a brilliant aesthetic sense and fashion intelligence. She knows exactly how to style a perfect outfit.</li>
+                        <li><strong>Fine Art:</strong> Exceptionally skilled at creating beautiful, cute, and meaningful artworks on canvas.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="highlights animate-fade-in" style="animation-delay: 0.4s;">
+            <div class="container">
+                <h2>Creative Identity</h2>
+                <p class="section-intro">The sweet elements that define mehai's artistic journey:</p>
+                <div class="grid-cards">
+                    <div class="card">
+                        <i class="fas fa-video"></i>
+                        <span>Dedicated TikTok Fanbase</span>
+                    </div>
+                    <div class="card">
+                        <i class="fas fa-camera-retro"></i>
+                        <span>Aesthetic Fashion Modeling</span>
+                    </div>
+                    <div class="card">
+                        <i class="fas fa-music"></i>
+                        <span>Expressive Dance Covers</span>
+                    </div>
+                    <div class="card">
+                        <i class="fas fa-palette"></i>
+                        <span>Beautiful Canvas Arts</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="interests animate-fade-in" style="animation-delay: 0.5s;">
+            <div class="container">
+                <h2>Inspiration & Dreams</h2>
+                <div class="content-box">
+                    <p>Mayhainu's fabulous dance videos have captured the hearts of many! She has successfully built a very special and dedicated fan base on TikTok, where her sweet smile and flawless performances continue to go viral.</p>
+                    <hr class="divider">
+                    <p>Her absolute favorite star and biggest inspiration is <strong>Jennie Kim</strong>, the gorgeous South Korean singer and rapper. Channeling Jennie's fierce yet cute energy, Mayhainu continues to glow and grow in the world of fashion, art, and dance.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="social animate-fade-in" style="animation-delay: 0.6s;">
+            <div class="container">
+                <h2>Let's Be Friends!</h2>
+                <p class="section-intro">Follow mehai's cute journey across her social media platforms:</p>
+                <div class="social-links icon-links">
+                    <a href="https://facebook.com/Mayhai" target="_blank" class="icon-btn" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://instagram.com/mayhai_" target="_blank" class="icon-btn" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="https://tiktok.com/@mayhainu0" target="_blank" class="icon-btn" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="animate-fade-in" style="animation-delay: 0.7s;">
+        <div class="container">
+            <h2>Say Hello! 💌</h2>
+            <p>Email me at: <br> <a href="mailto:mehainu1234@gmail.com" class="email-link">mehainu1234@gmail.com</a></p>
+            <p class="copyright">&copy; 2026 Mehai. Made with lots of love & sparkle ✨</p>
+        </div>
+    </footer>
+</body>
+</html>
